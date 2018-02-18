@@ -1,3 +1,8 @@
+body{
+background: $gradient;
+  height: 100vh;
+}
+
 .brand img{
   width: 4vh;
 }
@@ -8,7 +13,7 @@
 
 .img img{
   margin-top: 10vh;
-  width: 100%;
+  width: 50%;
 }
 
 .start{
@@ -25,7 +30,7 @@ li{
 }
 
 .btn-primary{
-  width: 100%;
+@include btnPrimary();
 }
 
 .h3{

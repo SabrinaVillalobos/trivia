@@ -39,12 +39,13 @@ $(document).ready(function() {
         
         questionList.append(answersList);
         $('.questionsContainer').append(questionList);
+        $('.questionsContainer').append(`<div class="text-center"><button class="btn btn-primary">Next</button></div>`);
       }
     }
 
 
-  });
-});
 
+});
+})
 /*
 */
