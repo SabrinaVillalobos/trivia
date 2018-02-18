@@ -1,8 +1,7 @@
 $(document).ready(function() {
   $('#start').click(function() {
     $('.startcontainer').html('');
-    $('.questionsContainer').append(`<div class="row"><div class="col-xs-12" id="question"></div></div><div class="row"><div class="col-xs-12" id="answers"></div></div>`)
-    
+    //$('.questionContainer').append(`<div class="row"><div class="col-xs-12" id="question"></div></div><div class="row"><div class="col-xs-12" id="answers"></div></div>`)    
     $.ajax({
       url: `https://opentdb.com/api.php?amount=15&category=23&difficulty=medium`,
       method: 'GET',
@@ -16,22 +15,37 @@ $(document).ready(function() {
       console.log('Error');
     })
 
-    function showQuestionsAnswers(info) {
-      console.log(info);
+    function showQuestionsAnswers(info) { 
       var info = info.results;
-
-      for(i in info) {
+    
+      for (var i in info) {
         var allinfo = info[i];
         var question = allinfo.question;
         var correct_answer = allinfo.correct_answer;
         var incorrect_answers = allinfo.incorrect_answers;
-        console.log(question, correct_answer, incorrect_answers);
+        var allanswer = correct_answer+ ',' + incorrect_answers;
+        var arrayAnswer = allanswer.split(',');
+        console.log(arrayAnswer);
 
-        var questionContainer = $('#question');
-        var answersContainer = $('#answers');
-
-        questionContainer.append(`<h3>${question}</h3>`);
+        var questionList = $(`<div class="result"></div>`);
+        var onequestion = $(`<h3> ${question} </h3>`);
+        var answersList = $(`<ul class="list-group-item answersList"></ul>`);
+        for (var i = 0; i < arrayAnswer.length; i++) {
+          var oneListAnswer = $(`<li><button class="btn btn-primary">${arrayAnswer[i]}</button></li>`);
+          answersList.append(oneListAnswer);
+        }
+        
+        questionList.append(onequestion);
+        
+        questionList.append(answersList);
+        $('.questionsContainer').append(questionList);
       }
     }
+
+
   });
 });
+
+/*
+
+*/
