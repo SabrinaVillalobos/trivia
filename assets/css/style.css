@@ -1,0 +1,33 @@
+.brand img{
+  width: 4vh;
+}
+
+.brand a{
+  padding: 0.5em;
+}
+
+.img img{
+  margin-top: 10vh;
+  width: 100%;
+}
+
+.start{
+  margin-top: 2em;
+}
+
+li{
+  list-style: none;
+  padding: 1em;
+}
+
+.container-fluid{
+  padding-top: 2em;
+}
+
+.btn-primary{
+  width: 100%;
+}
+
+.h3{
+  padding-bottom: 10px;
+}
