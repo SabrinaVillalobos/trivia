@@ -47,4 +47,4 @@ $(document).ready(function() {
       }
     } // funcion showQuestionsAnswers
   }); // click start
-}); // document.ready  
+}); // document.ready
