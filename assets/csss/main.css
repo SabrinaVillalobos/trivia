@@ -5799,7 +5799,7 @@ button.close {
     display: none !important; } }
 body {
   background: linear-gradient(45deg, #f16f5c 0%, #abcb57 0%, #5f95dd 100%);
-  height: 100vh; }
+  height: 100%; }
 
 .brand img {
   width: 4vh; }
