@@ -1,0 +1,38 @@
+body{
+background: $gradient;
+  height: 100%;
+}
+
+.brand img{
+  width: 4vh;
+}
+
+.brand a{
+  padding: 0.5em;
+}
+
+.img img{
+  margin-top: 10vh;
+  width: 50%;
+}
+
+.start{
+  margin-top: 2em;
+}
+
+li{
+  list-style: none;
+  padding: 1em;
+}
+
+.container-fluid{
+  padding-top: 2em;
+}
+
+.btn-primary{
+@include btnPrimary();
+}
+
+.h3{
+  padding-bottom: 10px;
+}
