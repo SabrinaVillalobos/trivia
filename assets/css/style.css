@@ -18,3 +18,7 @@
 .questionsContainer{
   margin-top: 10vh;
 }
+
+.nextQuestion img{
+  width: 90%;
+}
